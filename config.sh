@@ -122,6 +122,7 @@ case "$1" in
 
 "flame")
 	echo PRODUCT_NAME=$1 >> .tmp-config &&
+       echo DEVICE=$1 >> .tmp-config &&
        repo_sync $1
 	;;
 
