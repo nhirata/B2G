@@ -197,6 +197,13 @@ case "$1" in
 	repo_sync $1
 	;;
 
+"chirimen")
+	echo DEVICE=chirimen >> .tmp-config &&
+	echo PRODUCT_NAME=chirimen >> .tmp-config &&
+	echo LUNCH=chirimen-userdebug >> .tmp-config &&
+	repo_sync chirimen
+	;;
+
 "leo-l"|"aries-l"|"scorpion-l"|"sirius-l"|"honami-l"|"amami-l"|"tianchi-l"|"flamingo-l"|"eagle-l"|"seagull-l")
 	echo PRODUCT_NAME=$1 | sed 's/..$//' >> .tmp-config &&
 	repo_sync sony-aosp-l
@@ -243,7 +250,8 @@ case "$1" in
 	echo - emulator-x86-jb
 	echo - emulator-x86-kk
 	echo - emulator-x86-l
-	echo "> Sony Xperia devices"
+	echo - chirimen
+        echo "> Sony Xperia devices"
 	echo - aries "(Z3 Compact KK)"
 	echo - aries-l "(Z3 Compact L)"
 	echo - leo-kk "(Z3 KK)"
