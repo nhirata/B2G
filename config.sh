@@ -209,6 +209,13 @@ case "$1" in
 	repo_sync sony-aosp-l
 	;;
 
+"chirimen")
+	echo DEVICE=chirimen >> .tmp-config &&
+	echo PRODUCT_NAME=chirimen >> .tmp-config &&
+	echo LUNCH=chirimen-userdebug >> .tmp-config &&
+	repo_sync chirimen
+	;;
+
 *)
 	echo "Usage: $0 [-cdflnq] [-j <jobs>] [--force-sync] (device name)"
 	echo "Flags are passed through to |./repo sync|."
@@ -251,6 +258,7 @@ case "$1" in
 	echo - emulator-x86-jb
 	echo - emulator-x86-kk
 	echo - emulator-x86-l
+	echo - chirimen "(use with BRANCH=v2.1 )"
 	echo "> Sony Xperia devices"
 	echo - aries "(Z3 Compact KK)"
 	echo - aries-l "(Z3 Compact L)"
