@@ -30,8 +30,8 @@ case `uname` in
 	exit -1
 esac
 
-GITREPO=${GITREPO:-"git://github.com/mozilla-b2g/b2g-manifest"}
-BRANCH=${BRANCH:-master}
+GITREPO=${GITREPO:-"git://github.com/nhirata/b2g-manifest"}
+BRANCH=${BRANCH:-pine}
 
 while [ $# -ge 1 ]; do
 	case $1 in
